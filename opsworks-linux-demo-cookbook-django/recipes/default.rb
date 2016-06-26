@@ -1,4 +1,4 @@
-include_recipe 'build-essential'
+asdasdinclude_recipe 'build-essential'
 
 app = search(:aws_opsworks_app).first
 app_path = "/srv/#{app['shortname']}"
@@ -31,7 +31,8 @@ application app_path do
     allowed_hosts ['localhost', node['cloud']['public_ipv4'], node['fqdn']]
     settings_module 'dpaste.settings.deploy'
     database 'sqlite:///dpaste.db'
-    syncdb true
+    #syncdb true
+    makemigrations true
     migrate true
   end
 
