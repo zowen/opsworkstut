@@ -1,5 +1,5 @@
 include_recipe 'build-essential'
-include_recipe 'application_git'
+#include_recipe 'application_git'
 
 app = search(:aws_opsworks_app).first
 app_path = "/srv/#{app['shortname']}"
