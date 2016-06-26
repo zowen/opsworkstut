@@ -21,11 +21,16 @@ end
 #)
 
 application app_path do
-  git app_path do
-    repository app['app_source']['url']
-    deploy_key app['app_source']['ssh_key']
+  #git app_path do
+  #  repository app['app_source']['url']
+  #git 
+    #deploy_key app['app_source']['ssh_key']
     #node[:deploy]["#{app['shortname']}"][:scm][:ssh_key]
-    action :sync
+    #action :sync
+  #end
+
+  git app['app_source']['url'] do
+    deploy_key app['app_source']['ssh_key']
   end
 
   python '2'
