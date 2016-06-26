@@ -1,4 +1,4 @@
-asdasdinclude_recipe 'build-essential'
+include_recipe 'build-essential'
 
 app = search(:aws_opsworks_app).first
 app_path = "/srv/#{app['shortname']}"
