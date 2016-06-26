@@ -32,7 +32,7 @@ application app_path do
     settings_module 'dpaste.settings.deploy'
     database 'sqlite:///dpaste.db'
     #syncdb true
-    makemigrations true
+    #makemigrations true
     migrate true
   end
 
